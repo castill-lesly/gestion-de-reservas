@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Habitacion;
+use App\Models\Huesped;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /*
@@ -22,8 +24,8 @@ class ReservaFactory extends Factory
         return [
             "fecha_entrada"=>$this->faker->dateTime(),
             "fecha_salida"=>$this->faker->dateTime(),
-            "huesped_id"=>$this->faker->numberBetween(0,100), 
-            "habitacion_id"=>$this->faker->numberBetween(0,100),
+            "huesped_id"=>Huesped::get('id')->random(),
+            "habitacion_id"=>Habitacion::get('id')->random(),
            "numero_de_huespedes"=>$this->faker->numerify(0,100),
            //
         ];
