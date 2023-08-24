@@ -35,7 +35,7 @@ fecha_salida
 <br>
 <div>
 habitacion_id
-<input type="date"name="habitacion_id" id="habitacion_id" placeholder="id de habitacion" value="{{old('habitacion_id',$reservas->habitacion_id)}}">
+<input type="text"name="habitacion_id" id="habitacion_id" placeholder="id de habitacion" value="{{old('habitacion_id',$reservas->habitacion_id)}}">
 </div>
 
 <br>

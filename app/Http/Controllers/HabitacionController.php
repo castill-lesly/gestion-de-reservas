@@ -31,7 +31,7 @@ class HabitacionController extends Controller
             'numero.regex'=> 'numero de habitacion  es numerica',
            
 
-            'tipo.required' => ' el tipo de habitación puede estar vacia',
+            'tipo.required' => ' El tipo de habitación  no puede estar vacia',
             'tipo.regex'=> ' el tipo de habitación (individual, doble, suite, etc ',
 
            'precio.required' => 'El precio de la habitacion  no puede estar vacia',

@@ -45,7 +45,7 @@ class HuespedController extends Controller
 
         ]);
        
-        $huespeds= new huesped(); 
+        $huespeds= new Huesped(); 
         $huespeds->nombre=$request->input('nombre');
         $huespeds->apellido=$request->input('apellido');
         $huespeds->correo_electronico=$request->input('correo_electronico');
@@ -53,20 +53,20 @@ class HuespedController extends Controller
 
         $huespeds->save(); 
 
-        return redirect()->route('Huespeds.Huindex');
+        return redirect()->route('Huesped.Huindex');
     }
 
     public function show ($id)
     {
         //         
-        $huespeds = huesped::findOrfail($id); 
+        $huespeds = Huesped::findOrfail($id); 
         return view('Huesped.HuShow' , compact('huespeds'));
     }
 
 
     public function edit(string $id)
     {
-        $huespeds = huesped::findOrfail($id); 
+        $huespeds = Huesped::findOrfail($id); 
         return view('huesped.HuEdit')->with('huespeds',$huespeds);
     }
 
@@ -74,7 +74,7 @@ class HuespedController extends Controller
     public function update(Request $request, string $id)
     {
 
-        $huespeds = huesped::findOrfail($id); 
+        $huespeds = Huesped::findOrfail($id); 
 
         $request->validate([
             'nombre'=>'required|regex:/[A-Z][a-z]+/i', 
