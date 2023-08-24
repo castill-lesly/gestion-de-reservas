@@ -26,7 +26,7 @@ class ReservaFactory extends Factory
             "fecha_salida"=>$this->faker->dateTime(),
             "huesped_id"=>Huesped::get('id')->random(),
             "habitacion_id"=>Habitacion::get('id')->random(),
-           "numero_de_huespedes"=>$this->faker->numerify(0,100),
+           "numero_de_huespedes"=>$this->faker->numberBetween(1,5),
            //
         ];
     }
